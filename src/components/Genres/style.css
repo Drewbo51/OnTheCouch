@@ -1,0 +1,52 @@
+.genreDivs {
+    display: flex;
+    flex-direction: column;
+    /* background-image: url("../../genresBackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.genre {
+    border: 2px solid black;
+    width: 100%;
+    height: 175px;
+    display: flex;
+    flex-direction: row;
+}
+
+.leftBox { 
+    border: 2px solid black;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.imgDiv {
+    flex-basis: 33%;  
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    border: 2px solid black;
+}
+
+.imgDiv p {
+    border: 2px solid black;
+    flex-basis: 25%;
+    margin: 0 0;
+}
+
+.imgDiv img {
+    border: 2px solid black;
+    flex-basis: 75%;
+    margin: 0 0;
+}
+
+.leftBox div {
+    flex-basis: 33%;
+    border: 2px solid black; 
+}
+
+.leftBox h1 {
+    flex-basis: 33%;
+
+}
