@@ -4,87 +4,80 @@ import axios from "axios";
 
 class Genres extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: [],
-        }
-    }
+   state ={
+       comedy: [],
+       romance: [],
+       action: [],
+       isLoaded: false
+   }
 
-    componentDidMount() {
+   componentDidMount() {
 
-        const options = {
+        const APIkey = "64f6620fb1msh550ea248145b90dp171d28jsn9b849cd5c177";
+
+        const options1 = {
             method: 'GET',
             url: 'https://imdb8.p.rapidapi.com/auto-complete',
-            params: {q: 'mystery'},
+            params: {q: 'comedy'},
+            headers: {
+                    'x-rapidapi-host': 'imdb8.p.rapidapi.com',
+                    'x-rapidapi-key': APIkey
+            }
+          
+        };
+         
+        const options1Act = axios.request(options1)
+
+        const options2 = {
+            method: 'GET',
+            url: 'https://imdb8.p.rapidapi.com/auto-complete',
+            params: {q: 'romance'},
             headers: {
                 'x-rapidapi-host': 'imdb8.p.rapidapi.com',
-                'x-rapidapi-key': '06de7c36d9msh9c779a3dc13beccp13f8f8jsn548b5609e348'
+                'x-rapidapi-key': APIkey
+            }
+
+        };
+    
+        const options2Act = axios.request(options2)
+
+        const options3 = {
+            method: 'GET',
+            url: 'https://imdb8.p.rapidapi.com/auto-complete',
+            params: {q: 'action'},
+            headers: {
+                'x-rapidapi-host': 'imdb8.p.rapidapi.com',
+                'x-rapidapi-key': APIkey
             }
         };
-
-        axios.request(options).then((response) => {
-                        //     for (var i =0; i < Math.min(response.data.d.length, 5); i++) {
-            // console.log(response.data.d[i]);
-            //     }
-
-            this.setState({
-                items: response.data.d,
-                
-            })
-
-        })
-
-    }
-
-    render() {
-
-        var { items } = this.state;
-        
-        return (
+    
+        const options3Act = axios.request(options3)
             
-            <div className="genreDivs">
-            <div className="genre action">
-                 <div className="leftBox">
-                    <h1>Action</h1>
-                    {items.map((item) => (
-                        <div className="imgDiv">
-                            <img height="120px" width="175px" key={item.id} alt={item.l} src={item.i.imageUrl} />
-                            <p>{item.l}</p>
-                        </div>
-                    ))}
-                  
-               </div>
-           </div>
-        </div>
+        axios.all([options1Act, options2Act, options3Act])
+        .then(axios.spread((data1, data2, data3) => 
+        this.setState({
+            comedy: data1,
+            romance: data2,
+            action: data3,
+            isLoaded: true
+        })
+    )).catch(error => console.error(error));
 
-        )
+    console.log(this.state.comedy)
+    console.log(this.state.romance)
+    console.log(this.state.action)
+   }
 
-    }
+   render() {
+
+    return (
+        <div>Check Cons</div>
+    )
+    
+   }
 
 }
 
-export default Genres;
 
-            // <ul>
-            //     {items.map(item => (
-            //         <li key={item.id}>{item.l}</li>
-            //     ))}
-            // </ul>
 
-                //     <div className="imgDiv">
-                //       <img alt="title2" src="" />
-                //        <p>TITLE HERE</p>
-                //    </div>
-                //     <div className="imgDiv">
-                //        <img alt="title3" src="" />
-                //         <p>TITLE HERE</p>
-                //     </div>
-                //     <div className="imgDiv">
-                //         <img alt="title4" src="" />
-                //         <p>TITLE HERE</p>
-                //     </div>
-                //    <div className="imgDiv">
-                //         <img alt="title5" src="" />
-                //        <p>TITLE HERE</p>
-                //    </div>
+ export default Genres;
