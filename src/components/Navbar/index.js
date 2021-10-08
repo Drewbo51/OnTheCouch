@@ -9,22 +9,22 @@ function Navbar() {
     return (
         <ul class="nav nav-tabs justify-content-center newSheet2">
             <li class="nav-item">
-            <Link to="/Genres" className={location.pathname === "/genres" ? "nav-link active" : "nav-link"}>
+            <Link to="/genres" className={location.pathname === "/genres" ? "nav-link active" : "nav-link"}>
                 Genres
             </Link>
             </li>
             <li class="nav-item">
-            <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
-                Blockbuster
-            </Link>
-            </li>
-            <li class="nav-item">
-            <Link to="/Home" className={location.pathname === "/home" ? "nav-link active" : "nav-link"}>
+            <Link to="/" className={location.pathname === "/home" ? "nav-link active" : "nav-link"}>
                 Home
             </Link>
             </li>
             <li class="nav-item">
-            <Link to="/" className={location.pathname === "/" ? "nav-link active" : "nav-link"}>
+            <Link to="/blockbuster" className={location.pathname === "/blockbuster" ? "nav-link active" : "nav-link"}>
+                Blockbuster
+            </Link>
+            </li>
+            <li class="nav-item">
+            <Link to="/about" className={location.pathname === "/about" ? "nav-link active" : "nav-link"}>
                 About
             </Link>
             </li>
