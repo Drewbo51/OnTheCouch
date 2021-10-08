@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Home() {
+function Home(props) {
     return (
         <div className="newSheet3">
             <div className="altered">
@@ -12,8 +12,8 @@ function Home() {
                 <div className="container-fluid">
             
                 <form className="d-flex">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-success" type="submit">Search</button>
+                <input onChange={props.handleInputChange} name="search" value={props.state} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button onClick={props.handleFormSubmit} className="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 </div>
             </nav>

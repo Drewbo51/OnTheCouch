@@ -1,9 +1,6 @@
 .genreDivs {
     display: flex;
     flex-direction: column;
-    /* background-image: url("../../genresBackground.jpg");
-    background-position: center;
-    background-repeat: no-repeat; */
 }
 
 .genre {
