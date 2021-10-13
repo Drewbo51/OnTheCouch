@@ -3,10 +3,6 @@
   background-image: url("./genresBackground.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 

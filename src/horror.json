@@ -1,0 +1,37 @@
+[
+    {
+        "id": 6,
+        "title": "Halloween Kills",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/snHgrt2SAEHdI8LLUzV1HgHqPlr.jpg",
+        "movie_id": "tt10665338"
+    },
+    {
+        "id": 7,
+        "title": "Malignant",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/dGv2BWjzwAz6LB8a8JeRIZL8hSz.jpg",
+        "movie_id": "tt3811906"
+    },
+    {
+        "id": 8,
+        "title": "Candyman",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/dqoshZPLNsXlC1qtz5n34raUyrE.jpg",
+        "movie_id": "tt9347730"
+    },
+    {
+        "id": 9,
+        "title": "No One Gets Out Alive",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/bZUostLcCZYgcuBuAjmuSkBggiQ.jpg",
+        "movie_id": "tt13056008"
+    },
+    {
+        "id": 10,
+        "title": "Last Night in Soho",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/1qamhFbRGHicXz7hAzcsOnKVyFL.jpg",
+        "movie_id": "tt9639470"
+    }
+]

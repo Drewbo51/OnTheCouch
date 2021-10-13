@@ -7,13 +7,13 @@ function Home(props) {
             <div className="altered">
 
             </div>
-            <h5>Today's theatre hits brought to you with top level reviews.</h5>
-            <nav className="navbar navbar-light bg-light">
+            <h5 className="solo">Today's theatre hits brought to you with top level reviews.</h5>
+            <nav className="navbar navbar-light bg-light roundMe">
                 <div className="container-fluid">
             
                 <form className="d-flex">
-                <input onChange={props.handleInputChange} name="search" value={props.state} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button onClick={props.handleFormSubmit} className="btn btn-outline-success" type="submit">Search</button>
+                <input onChange={props.changeEvent} name="search" value={props.value} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button onClick={props.onClickFunction} className="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 </div>
             </nav>

@@ -1,0 +1,37 @@
+[
+    {
+        "id": 16,
+        "title": "The Last Duel",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/lDSLp0tjy5fYwYTRoLZzUxJ65w0.jpg",
+        "movie_id": "tt4244994"
+    },
+    {
+        "id": 17,
+        "title": "No Time to Die",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/iUgygt3fscRoKWCV1d0C7FbM9TP.jpg",
+        "movie_id": "tt2382320"
+    },
+    {
+        "id": 18,
+        "title": "Dune",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/s1FhMAr91WL8D5DeHOcuBELtiHJ.jpg",
+        "movie_id": "tt1160419"
+    },
+    {
+        "id": 19,
+        "title": "Venom: Let There Be Carnage",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+        "movie_id": "tt7097896"
+    },
+    {
+        "id": 20,
+        "title": "Shang-Chi and the Legend of the Ten Rings",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg",
+        "movie_id": "tt9376612"
+    }
+]

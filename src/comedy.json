@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "title": "Free Guy",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg",
+        "movie_id": "tt6264654"
+    },
+    {
+        "id": 2,
+        "title": "The Starling",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/yM6mDwGBXfGSuk68Zy38jnZhxA7.jpg",
+        "movie_id": "tt5164438"
+    },
+    {
+        "id": 3,
+        "title": "The Suicide Squad",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/kb4s0ML0iVZlG6wAKbbs9NAm6X.jpg",
+        "movie_id": "tt6334354"
+    },
+    {
+        "id": 4,
+        "title": "Cruella",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/wToO8opxkGwKgSfJ1JK8tGvkG6U.jpg",
+        "movie_id": "tt3228774"
+    },
+    {
+        "id": 5,
+        "title": "My Little Pony: A New Generation",
+        "year": 2021,
+        "poster": "http://image.tmdb.org/t/p/original/hzq5XRGgm6NDMOW1idUvbpGqEkv.jpg",
+        "movie_id": "tt10101702"
+    } 
+]

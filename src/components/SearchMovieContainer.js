@@ -1,65 +1,71 @@
-import API from "../utils/api";
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import Home from "./Home";
-import ResultsCard from "./ResultsCard";
+import axios from "axios";
+import "./searchMovieContainer.css";
+import placeHolder from './placeHolder.jpg';
 
-class SearchMovieContainer extends Component {
+const SearchMovieContainer = () => {
 
-    state = {
-        items: {},
-        search: ""
+    const [ items, setItems ] = useState([]);
+    const [ name, setName ] = useState("");
+    const [ inputChange, setInputChange ] = useState("");
+
+
+    const changeEvent = (event) => {
+        setName(event.target.value);
     }
 
-    componentDidMount() {
-        this.searchReviews();
-    }
+    const onClickFunction = (event) => {
 
-    searchReviews = (query) => {
-        API.search(query).then(res => {
-            this.setState({
-                items: {...res.data.results}
-            })
-            console.log(this.state.items)
-        }).catch(error => { console.log(error)});
-    };
-
-    handleInputChange = (event) => {
-        const value = event.target.value;
-        const name = event.target.name;
-        this.setState({
-            [name]: value
-        });
-    }
-
-    handleFormSubmit = (event) => {
         event.preventDefault();
-        this.searchReviews(this.state.search);
-    };
 
-    render() {
+        if(name === "") {
+            alert("Please Enter a Valid Movie Title")
+            return
+        }
+         async function getReview() {
+
+            const result = await axios.get("https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + name + "&api-key=dcJvhvqSgkbREL8089hmt7neiL70YSW1");
+            setItems(result.data.results);
+            setInputChange(name);
+         }
+         getReview();
+         
+    }
+
+    useEffect(() => {}, [inputChange])
+
         return (
             <div>
             <Home
-            handleInputChange={this.handleInputChange}
-            handleFormSubmit={this.handleFormSubmit}
-            state={this.state.search}
+            changeEvent={changeEvent}
+            onClickFunction={onClickFunction}
+            value={name}
             />
-            // <ResultsCard
-            // imageSrc={res.multimedia.src}
-            title={this.state.items.display_title}
-            review={this.state.items.summary_short}
-            linkToReviewSource={this.state.items.link.url}
-            />
-            </div>           
+                <div className="cardDiv">
+                {items.map((item, index) => {
+                    return (
+                        <div key={index} className="card mb-3">
+                            <div className="row g-0">
+                                <div className="col-md-4">
+                                { item.multimedia === null ? <p><strong>NO PHOTO AVAILABLE</strong></p> : ""}
+                                { item.multimedia === null ? <img src={placeHolder} className="card-img-top" alt={item.display_title} /> : <img src={item.multimedia.src} className="card-img-top" alt={item.display_title} /> }
+                                </div>
+                                <div className="col-md-8">
+                                <div className="card-body">
+                                    <h5 className="card-title">{item.display_title}</h5>
+                                    <p className="card-text">{item.summary_short}</p>
+                                    <a href={item.link.url} className="btn btn-primary">Click Here to See Review from NY Times Reviews</a>
+                                </div>
+                                </div>
+                            </div>
+                            </div>                   
+                    )
+                })}
+                </div>
+            </div>
         );
-    }
-};
+    
+}
 
 export default SearchMovieContainer;
-
-            // <ResultsCard
-            // // imageSrc={res.multimedia.src}
-            // title={this.state.items.display_title}
-            // review={this.state.items.summary_short}
-            // linkToReviewSource={this.state.items.link.url}
-            // />
