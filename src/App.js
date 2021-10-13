@@ -19,7 +19,11 @@ function App() {
         <Route exact path="/searchReviews" component={SearchMovieContainer} />
         <Route exact path="/genres" component={Genres} />
         <Route exact path="/playing" component={Playing} />
+<<<<<<< HEAD
         <Footer />
+=======
+      <Footer/>
+>>>>>>> 2c77a8fd390631f641746b3a1b12f1cb47b959fd
       </div>
     </Router>
   );
