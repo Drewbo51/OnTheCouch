@@ -5,6 +5,8 @@ import Playing from "./components/Playing";
 import Navbar from "./components/Navbar";
 import Genres from "./components/Genres";
 import SearchMovieContainer from "./components/SearchMovieContainer";
+import About from "./components/About";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -13,9 +15,11 @@ function App() {
       <div className="App-header">
         <Jumbotron />
         <Navbar />
+        <Route exact path="/" component={About} />
         <Route exact path="/searchReviews" component={SearchMovieContainer} />
         <Route exact path="/genres" component={Genres} />
         <Route exact path="/playing" component={Playing} />
+        <Footer />
       </div>
     </Router>
   );
