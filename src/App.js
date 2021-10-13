@@ -16,6 +16,7 @@ function App() {
         <Route exact path="/searchReviews" component={SearchMovieContainer} />
         <Route exact path="/genres" component={Genres} />
         <Route exact path="/playing" component={Playing} />
+      <Footer/>
       </div>
     </Router>
   );
