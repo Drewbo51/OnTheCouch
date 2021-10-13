@@ -7,7 +7,7 @@ function About() {
         <div className="leaderDiv">
             <div className="leadDiv">
         <div className="fillerDiv"></div>
-                <img src={couch} alt="couch" height="250px" width="325x" />
+                <img src={couch} alt="couch" height="275px" width="365x" />
                 </div>
             <div className="leadDiv">
                 <div className="fillerDiv"></div>
